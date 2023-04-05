@@ -1,4 +1,4 @@
-# reverse-a-node-with-k-group
+# Edit Distance
 Welcome to the sokoskills coding test!
 
 This repository contains a coding test for candidates applying for a programming position. Please read the instructions carefully and complete the tasks as specified.
@@ -13,33 +13,38 @@ Create a pull request to the original repository with your changes.
 
 # Files
 
-![Alt text](C:\Users\Public\prasanth\official\coding-test\reverse_ex1.jpg?raw=true "Example 1")
-Input: head = [1,2,3,4,5], k = 2
-Output: [2,1,4,3,5]
-Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+ Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+You have the following three operations permitted on a word:
 
-You may not alter the values in the list's nodes, only nodes themselves may be changed.
+Insert a character
+Delete a character
+Replace a character
 
 Example 1:
 
-Input: nums1 = [1,3], nums2 = [2] Output: 2.00000 Explanation: merged array = [1,2,3] and median is 2. Example 2:
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+Example 2:
 
-Input: nums1 = [1,2], nums2 = [3,4] Output: 2.50000 Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation: 
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+exection -> execution (insert 'u')
+ 
 
 Constraints:
 
-nums1.length == m nums2.length == n 0 <= m <= 1000 0 <= n <= 1000 1 <= m + n <= 2000 -106 <= nums1[i], nums2[i] <= 106
-
-task2.py
-This file contains a class Person with some attributes and methods. Please complete the class according to the instructions in the file.
-
-task3.py
-This file contains a function reverse_words that takes in a string s as an argument and returns a string with the words in reverse order. Please complete the function according to the instructions in the file.
-
-test_task1.py, test_task2.py, test_task3.py
-These files contain unit tests for the corresponding tasks. Please ensure that your code passes all the tests before submitting your solution.
+0 <= word1.length, word2.length <= 500
+word1 and word2 consist of lowercase English letters.
 
 Submission
 Please ensure that you have completed all the tasks and that your code passes all the tests before submitting your solution. When you are ready, create a pull request to the original repository with your changes. We will review your code and get back to you as soon as possible.
